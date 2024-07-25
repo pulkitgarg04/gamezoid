@@ -1,0 +1,30 @@
+#news-hero {
+    background-image: url("../media/news-background.jpg");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#news-hero h2 {
+    letter-spacing: 15px;
+}
+
+#news-hero p {
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+#news-hero p a:hover {
+    color: #0357b7;
+}
+
+#news-hero h2,
+#news-hero p {
+    color: #fff;
+    margin-bottom: 30px;
+}
