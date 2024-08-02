@@ -441,7 +441,18 @@ header {
 
 
 
+#join-community {
+  background: url("../media/join-community-bg.jpg") repeat fixed 100%;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#join-community .join-community-inner {
+
+}
 
 
 
