@@ -1,4 +1,4 @@
-#store-hero {
+#community-hero {
     background-image: url("../media/hero-background.jpg");
     width: 100%;
     height: 50vh;
@@ -10,21 +10,21 @@
     padding: 14px;
 }
 
-#store-hero h2 {
+#community-hero h2 {
     letter-spacing: 15px;
 }
 
-#store-hero p {
+#community-hero p {
     letter-spacing: 5px;
     font-size: 12px;
 }
 
-#store-hero p a:hover {
+#community-hero p a:hover {
     color: #0357b7;
 }
 
-#store-hero h2,
-#store-hero p {
+#community-hero h2,
+#community-hero p {
     color: #fff;
     margin-bottom: 30px;
 }

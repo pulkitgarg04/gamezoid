@@ -5,250 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GameZoid - Epic Games made for True Gamers!</title>
+  <link rel="icon" type="image/x-icon" href="./assets/media/favicon.png">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
   <script src="https://kit.fontawesome.com/69a72a2c24.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <a href="/">GameZoid</a>
+  <header class="sticky">
+    <div id="logo"><img src="../assets/media/logo.webp" alt="logo" id="logo"></div>
     <nav>
       <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="/index.html">Home</a></li>
         <li><a href="./pages/store.html">Store</a></li>
         <li><a href="./pages/tournament.html">Tournaments</a></li>
+        <li><a href="./pages/community.html">Community</a></li>
         <li><a href="./pages/news.html">News</a></li>
         <li><a href="./pages/about.html">About</a></li>
         <li><a href="./pages/contact.html">Contact</a></li>
+        <li><i class="fa-solid fa-bag-shopping"></i></li>
+        <li><i class="fa-regular fa-circle-user"></i></li>
       </ul>
     </nav>
-    <button type="button" id="sign-in">Sign In</button>
     <div id="mobile">
-      <i class="fa-solid fa-bars"></i>
+      <span class="material-symbols-outlined">local_mall</span>
+      <span id="hamburger" class="material-symbols-outlined">menu</span>
     </div>
   </header>
-  <main>
-    <section class="front_page">
-      <div class="front_image">
-        <h4>Enjoy the games</h4>
-        <h1>Epic Games made for True Gamers!</h1>
-        <div class="jointeam_button"><button type="button">
-            Join with us
-          </button></div>
-        <div class="front"> <img
-            src="https://raw.githubusercontent.com/codewithsadee/unigine/master/assets/images/hero-banner.png"></div>
-      </div>
-    </section>
-    <section id="games">
-      <div class="game_section">
-        <div class="slideshow">
-          <div class="game_container">
-            <div class="game_img">
-              <img
-                src="https://www.dubaiweek.ae/wp-content/uploads/2021/08/1630197091_Grand-Theft-Auto-5-latest-version-codes-gifts-and-prizes.jpg">
-            </div>
-            <div class="about_game">
-              <h5>Starting at</h5>
-              <p>$<SPAN>12.99</SPAN>/monthly</p>
-              <button type="button">ORDER</button>
-            </div>
-          </div>
-          <div class="game_container">
-            <div class="game_img">
-              <img src="https://playpc.io/wp-content/uploads/2020/07/valorant-featured-image.jpeg">
-            </div>
-            <div class="about_game">
-              <h5>Starting at</h5>
-              <p>$<SPAN>12.99</SPAN>/monthly</p>
-              <button type="button">ORDER</button>
-            </div>
-          </div>
-          <!-- <div class="game_container">
-          <div class="game_img">
-            <img src="https://images.hdqwalls.com/wallpapers/pubg-mobile-z1.jpg">
-          </div>
-          <div class="about_game">
-            <h5>Starting at</h5>
-            <p>$<SPAN>12.99</SPAN>/monthly</p>
-            <button type="button">ORDER</button>
-          </div>
-        </div> -->
-          <!-- <div class="game_container">
-          <div class="game_img">
-            <img src="https://playpc.io/wp-content/uploads/2020/07/valorant-featured-image.jpeg">
-          </div>
-          <div class="about_game">
-            <h5>Starting at</h5>
-            <p>$<SPAN>12.99</SPAN>/monthly</p>
-            <button type="button">ORDER</button>
-          </div>
-        </div> -->
-          <!-- <div class="game_container">
-          <div class="game_img">
-            <img src="https://playpc.io/wp-content/uploads/2020/07/valorant-featured-image.jpeg">
-          </div>
-          <div class="about_game">
-            <h5>Starting at</h5>
-            <p>$<SPAN>12.99</SPAN>/monthly</p>
-            <button type="button">ORDER</button>
-          </div>
-        </div> -->
-        </div>
-        <div class="all_games">
-          <div class="allgames_text">
-            <h2>Popular Games</h2>
-            <button type="button">ALL</button>
-            <button type="button">PC Games</button>
-            <button type="button">Mobile Games</button>
-          </div>
-          <div class="games_grid">
-            <div class="allgame">
-              <div class="gameicon">
-                <img
-                  src="https://www.dubaiweek.ae/wp-content/uploads/2021/08/1630197091_Grand-Theft-Auto-5-latest-version-codes-gifts-and-prizes.jpg"
-                  alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>Grand Theft Auto</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://images.hdqwalls.com/wallpapers/pubg-mobile-z1.jpg" alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>PUBG</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://playpc.io/wp-content/uploads/2020/07/valorant-featured-image.jpeg" alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>VALORANT</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://www.giantbomb.com/a/uploads/original/1/12541/3312461-sq_n64_supermario64.jpg"
-                  alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>SUPER MARIO 64</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img
-                  src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/t/the-legend-of-zelda-breath-of-the-wild-switch/hero"
-                  alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>The Legend of Zelda: Breath of the Wild</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img
-                  src="https://compass-ssl.xbox.com/assets/64/02/6402981a-9446-46d8-8289-e370f3158746.jpg?n=Red-Dead-Redemption-II_GLP-Page-Hero-1084_1920x1080.jpg"
-                  alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3> Red Dead Redemption 2</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://wallpapercave.com/wp/wp4163782.jpg" alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>Castlevania: Symphony of the Night</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/eEczyEMDd2BLa3dtkGJVE9Id.png"
-                  alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>The Last of Us</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-            <div class="allgame">
-              <div class="gameicon">
-                <img src="https://assets.gamepur.com/wp-content/uploads/2020/10/16013139/minecraft.png" alt="gamename">
-              </div>
-              <div class="gameprice">
-                <h3>MINECRAFT</h3>
-                <p>Pricing</p>
-                <p><span>$10</span></p>
-                <button type="button">Play Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="Tournament">
-      <div class="tournament_container">
-        <div class="tournament_heading">
-          <h2>BATTLES EXTREME MASTERS</h2>
-          <h2><span>TOURNAMENT</span></h2>
-          <p>Our success in creating business solutions is due in large part to our talented and highly committed team.
-          </p>
-        </div>
-        <div class="tournament_matches">
-          <div class="match">
-            <p class="left">purple death cadets</p>
-            <div class="time">
-              <p><span>10:00</span></p>
-            </div>
-            <p class="right">trigger Brain squad</p>
-          </div>
-          <div class="match">
-            <p class="left">The Black Hat Hackers</p>
-            <div class="time">
-              <p><span>12:30</span></p>
-            </div>
-            <p class="right">Your Worst Nightmare</p>
-          </div>
-          <div class="match">
-            <p class="left">witches and quizards</p>
-            <div class="time">
-              <p><span>4:20</span></p>
-            </div>
-            <p class="right">Resting bitch faces</p>
-          </div>
-        </div>
-      </div>
 
-    </section>
-  </main>
+  <section id="gaming-products">
+    <h2>Gaming Product <span>Corner</span></h2>
+    <p>Compete with 100 players on a remote island for winner takes showdown known issue where certain skin strategic</p>
+  </section>
 
   <section id="join-community">
     <div class="join-community-inner">
@@ -256,21 +45,31 @@
     </div>
   </section>
 
-  <section id="newsletter" class="section-p1">
-    <div class="newstext">
-      <h4>Sign Up for Newsletters</h4>
-      <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+
+
+
+  <div class="our-partners">
+    <h2>Our Partners</h2>
+    <div class="partner-logos">
     </div>
-    <div class="form">
-      <input type="text" placeholder="Your email address">
-      <button class="normal">Sign Up</button>
+  </div>
+
+  <div class="location">
+    <div class="row">
+      <div class="location-name">
+        <h2 class="text">India</h2>
+      </div>
+      <div class="location-name">
+        <h2 class="text">USA</h2>
+      </div>
     </div>
-  </section>
-  
+  </div>
+
   <footer class="section-p1">
     <div class="col logo-col">
-      <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" class="logo">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut perspiciatis eum illum blanditiis facilis? In qui id.</p>
+      <img src="./assets/media/logo.webp" class="logo">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut perspiciatis eum illum blanditiis facilis? In
+        qui id.</p>
       <div class="follow">
         <h4>Active <span>With Us <i class="fa-solid fa-forward"></i></span></h4>
         <div class="icon">
