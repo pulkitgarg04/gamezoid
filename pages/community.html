@@ -7,12 +7,15 @@
   <title>Our Community - GameZoid</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/community.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/newletter.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
   <script src="https://kit.fontawesome.com/69a72a2c24.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <div id="logo">GameZoid</div>
+  <header class="sticky">
+    <div id="logo"><img src="../assets/media/logo.webp" alt="logo" id="logo"></div>
     <nav>
       <ul id="navbar">
         <li><a href="/index.html">Home</a></li>
@@ -22,12 +25,14 @@
         <li><a href="./news.html">News</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <li><a href="./account.html"><i class="fa-regular fa-circle-user"></i></a></li>
       </ul>
     </nav>
-    <button type="button" id="sign-in">Sign In</button>
     <div id="mobile">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+      <span class="material-symbols-outlined">local_mall</span>
+      <span id="hamburger" class="material-symbols-outlined">menu</span>
+  </div>
   </header>
 
   <section id="community-hero">
@@ -57,8 +62,9 @@
 
   <footer class="section-p1">
     <div class="col logo-col">
-      <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" class="logo">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut perspiciatis eum illum blanditiis facilis? In qui id.</p>
+      <img src="../assets/media/logo.webp" class="logo">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut perspiciatis eum illum blanditiis facilis? In
+        qui id.</p>
       <div class="follow">
         <h4>Active <span>With Us <i class="fa-solid fa-forward"></i></span></h4>
         <div class="icon">
@@ -103,7 +109,7 @@
     <div class="copyright">
       <p>Copyright &#169; 2024 - All Rights Reserved by <span>GameZoid</span></p>
     </div>
-  </footer>
+</footer>
 </body>
 
 </html>

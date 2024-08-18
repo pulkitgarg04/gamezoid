@@ -45,8 +45,8 @@ footer .col a:hover:after {
     transform-origin: bottom left;
 }
 
-footer .logo {
-    height: 40px;
+footer .logo-col .logo {
+    height: 25px;
     margin-bottom: 30px;
 }
 
