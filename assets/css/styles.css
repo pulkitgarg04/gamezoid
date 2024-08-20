@@ -60,22 +60,102 @@ button.normal {
     transition: 0.2s;
 }
 
+/* Gaming Products Display */
+
 #gaming-products {
+  text-align: center;
   margin-top: 90px;
-  height: 500px;
 }
 
-
-#join-community {
-  background: url("../media/join-community-bg.jpg") repeat fixed 100%;
-  height: 500px;
-  width: 100%;
+#gaming-products .gaming-products-text {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-#join-community .join-community-inner {}
+#gaming-products p {
+  width: 50vw;
+  margin-top: 20px;
+}
+
+#gaming-products .product-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+#gaming-products .product {
+  width: 23%;
+  min-width: 250px;
+  padding: 20px 20px;
+  border: 1px solid #313131;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#gaming-products .product:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#gaming-products .product img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#gaming-products .product .product-description {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#gaming-products .product .product-description .product-category {
+  text-align: center;
+}
+
+#gaming-products .product .product-description h6 {
+  display: inline-block;
+  background-color: var(--color);
+  color: black;
+  padding: 8px;
+  font-weight: 750;
+  border-radius: 5px;
+}
+
+#gaming-products .product .product-description h5 {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#gaming-products .product .product-description i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#gaming-products .product .product-description h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color);
+}
+
+#gaming-products .product .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #e8f6ea;
+  color: black;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+
 
 
 
