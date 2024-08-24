@@ -34,6 +34,78 @@
     </div>
   </header>
 
+  <section class="hero" id="hero">
+    <div class="container">
+      <p class="hero-subtitle">The Season 8</p>
+      <h1 class="h1 hero-title">WarZone</h1>
+      <a href="https://www.youtube.com/watch?v=VEEkW7y_tZU" target="_blank">
+        <div class="btn-container">
+          <button class="btn">
+            <span>Watch live</span>
+            <i class="fa-regular fa-circle-play"></i>
+          </button>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="tournament" id="tournament">
+    <div class="container">
+      <div class="tournament-content">
+        <p class="tournament-subtitle">Check out our next</p>
+        <h2 class="h3 tournament-title">Gaming Tournament!</h2>
+        <p class="tournament-text">
+          Lpsum dolor sit amet, consectetur adipiscing elit, sed labore et dolore magna aliqua.
+        </p>
+        <a href="./pages/tournament.html">
+          <button class="btn">Join with us</button>
+        </a>
+      </div>
+      <div class="tournament-prize">
+        <h2 class="h3 tournament-prize-title">Prize pool</h2>
+        <!-- We have used data tag here as data can be constly changing! -->
+        <data value="80000">$80000</data>
+        <figure>
+          <img src="./assets/media/tournament/prize-img.png" alt="Prize image">
+        </figure>
+      </div>
+      <div class="tournament-winners">
+        <h2 class="h3 tournament-winners-title">Last winners</h2>
+        <ul class="tournament-winners-list">
+          <li>
+            <div class="winner-card">
+              <figure class="card-banner">
+                <img src="./assets/media/tournament/winner-img-1.png" alt="Winner image">
+              </figure>
+              <h3 class="card-title">1st place</h3>
+            </div>
+          </li>
+          <li>
+            <div class="winner-card">
+              <figure class="card-banner">
+                <img src="./assets/media/tournament/winner-img-2.png" alt="Winner image">
+              </figure>
+              <h3 class="card-title">2nd place</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="store" class="section-p1">
+    <div class="store-section">
+      <h2>New Releases</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="">
+          <h4></h4>
+          <h5></h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="gaming-products" class="section-p1 new-section">
     <h2>Gaming Product <span style="color: var(--color);">Corner</span></h2>
     <div class="section-heading-text">
@@ -55,13 +127,13 @@
         </a>
       </div>
       <div class="product" onclick="window.location.href='#'">
-        <img src="./assets/gaming-products/2.jpg">
+        <img src="./assets/gaming-products/2.png">
         <div class="product-description">
           <div class="product-category">
-            <h6>T-SHIRTS</h6>
+            <h6>HEADPHONES</h6>
           </div>
-          <h5>Haier Women T-shirt</h5>
-          <h4>$19.00</h4>
+          <h5>GameZoid Gaming Headphones</h5>
+          <h4>$39.00</h4>
         </div>
         <a href="#">
           <i class="fas fa-shopping-cart cart"></i>
@@ -140,6 +212,9 @@
         </div>
       </div>
     </div>
+    <a href="./pages/news.html">
+      <button class="see-more-btn">See More</button>
+    </a>
   </section>
 
   <section id="social-media" class="section-p1 new-section">
@@ -148,7 +223,7 @@
       <p>Connect with us on social media platforms!</p>
     </div>
     <div class="social-media-icons">
-      <div class="icon-box">
+      <div class="icon-box facebook">
         <i class="fa-brands fa-facebook"></i>
         <p>Facebook</p>
       </div>
