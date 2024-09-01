@@ -73,8 +73,11 @@ button.normal {
 /* Hero Section */
 .hero {
   background: url("../media/hero-bg-home.webp") no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-attachment: fixed;
+  overflow-x: hidden;
   margin-top: 90px;
   padding: 60px 0;
   height: 100vh;
@@ -162,6 +165,7 @@ button.normal {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .tournament-content,
@@ -291,22 +295,6 @@ button.normal {
   font-weight: 500;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Gaming Products Display */
 #gaming-products .product-container {
   display: flex;
@@ -352,6 +340,7 @@ button.normal {
   padding: 8px;
   font-weight: 750;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 #gaming-products .product .product-description h5 {
@@ -389,6 +378,7 @@ button.normal {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .latest-news-container .news-box {
@@ -431,6 +421,7 @@ button.normal {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .social-media-icons .icon-box {
@@ -480,6 +471,7 @@ button.normal {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .single-logo {
@@ -505,6 +497,12 @@ button.normal {
   padding: 20px 100px;
 }
 
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
 .location-name {
   text-align: center;
 }
@@ -520,6 +518,12 @@ button.normal {
   display: inline-block;
   opacity: 50%;
   transition: 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .location-name .text {
+    margin-top: 20px;
+  }
 }
 
 .location-name .text:hover {
