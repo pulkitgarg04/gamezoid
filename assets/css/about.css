@@ -156,10 +156,6 @@ button.normal {
     width: 100%;
 }
 
-
-
-
-
 #about-features h2 {
     text-transform: uppercase;
 }
@@ -213,6 +209,7 @@ button.normal {
     margin: 10px;
     width: 70%;
     font-size: 14px;
+    line-height: 20px;
 }
 
 .feature-end {
@@ -249,21 +246,6 @@ button.normal {
     margin-left: 10px;
     font-size: 1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     display: flex;

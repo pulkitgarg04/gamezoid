@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 html {
     scroll-behavior: smooth;
     font-size: 100%;
 }
+
 
 :root {
     --color: #ffbb00;
@@ -65,47 +65,38 @@ body {
     color: #fff;
     margin-bottom: 30px;
 }
-
-.cards {
-    width: 25%;
-    /* Adjusted to fit three cards per row */
-    margin-bottom: 20px;
-    /* Space between rows */
+.cards{
+    width: 25%; /* Adjusted to fit three cards per row */
+    margin-bottom: 20px; /* Space between rows */
     background-color: #000;
     border-radius: 5px;
-    margin: 10px;
+    margin:10px;
     border: 0.5px solid rgb(70, 12, 56);
     box-sizing: border-box;
     text-align: center;
 }
 
-.image img {
+.image img{
     width: 100%;
-    height: 350px;
-    /* Fixed height for uniformity */
-    object-fit: fill;
-    /* Maintains aspect ratio while covering the area */
+    height: 350px; /* Fixed height for uniformity */
+    object-fit:fill; /* Maintains aspect ratio while covering the area */
     border-radius: 5px;
 }
-
-.title {
-    text-align: center;
-    padding: 5px;
+.title{
+    text-align: center ;
+    padding:5px;
 }
-
-.main {
+.main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px;
 }
-
-.des {
+.des{
     text-align: center;
     padding: 6px;
 }
-
-button {
+button{
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
@@ -114,24 +105,32 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
+    font-weight: bold;}
+button:hover{
     background-color: #000;
     color: #fff;
     transition: 0.5s;
-
+   
 
 }
 
-#menu-toggle {
-    display: none;
+
+#navbar {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly across the available space */
+    align-items: center;
+    padding: 0; /* Remove extra padding */
+  }
+
+
+
+#menu-toggle:checked ~ nav #navbar {
+    display: flex;
+    left: 0;
 }
 
-/* Style the hamburger button */
 #burger-button {
-    display: none;
+    display: block;
     position: absolute;
     top: 15px;
     left: 15px;
@@ -148,157 +147,214 @@ button:hover {
     transition: 0.3s;
 }
 
-/* Style changes when menu is open */
-#menu-toggle:checked+#burger-button .bar:nth-child(1) {
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + #burger-button .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-#menu-toggle:checked+#burger-button .bar:nth-child(2) {
+#menu-toggle:checked + #burger-button .bar:nth-child(2) {
     opacity: 0;
 }
 
-#menu-toggle:checked+#burger-button .bar:nth-child(3) {
+#menu-toggle:checked + #burger-button .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
 
 @media only screen and (min-width: 1024px) {
     .main {
         justify-content: space-between;
         padding: 40px;
     }
-
+    
     .cards {
         width: 30%;
         margin-bottom: 20px;
     }
-
     #burger-button {
-        display: none;
-        /* Hide hamburger button on large screens */
+        display: none; /* Hide hamburger button on large screens */
     }
 
     #navbar {
-        display: flex;
+        display: none;
         position: static;
         width: auto;
-        background-color: transparent;
-        /* Remove background color if not needed */
+        background-color: transparent; /* Remove background color if not needed */
     }
 }
 
 
 /* Medium screens (tablets) */
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-
+@media only screen and (max-width: 1024px) and (min-width: 970px) {
+    
     .main {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
+        justify-content: space-evenly;
+        padding: 10px;
     }
-
+    
     .cards {
-        width: 40%;
-        /* Two cards per row */
+        width: 40%; /* Two cards per row */
         margin-bottom: 20px;
     }
-
     #logo img {
         max-height: 40px;
+      }
+    #navbar{
+        margin-left: 0px;
+        
     }
-
-    #navbar {
-        display: flex;
-        flex-wrap: wrap;
-        /* Allow items to wrap onto a new line */
-        justify-content: center;
-        /* Center the items */
-        gap: 10px;
-        /* Add a small gap between items */
+    #latest-games{
+        text-align: center;
     }
-
-    #navbar li {
-        flex: 1 1 auto;
-        /* Allow items to shrink and grow as needed */
-        margin: 5px 0;
-        /* Add a small margin to keep items separated */
+    #burger-button {
+        display: none; /* Hide hamburger button on large screens */
     }
-
-    #navbar li a {
-        padding: 8px 12px;
-        /* Maintain reasonable padding */
-        font-size: 14px;
-        /* Adjust font size for better fit */
-    }
-
 }
+@media (min-width:768px) and (max-width:970px){
+    
+    #navbar li {
+        line-height: 2; /* Adjust this value to control spacing */
+        list-style: none; /* Optional: Removes bullet points if any */
+    }
+    
+    /* Optionally, if you want to add more spacing between the items */
+    #navbar li + li {
+        margin-top: 10px; /* Adds spacing between consecutive items */
+    }
+    #latest-games{
+        text-align: center;
+    }
+    .main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+    
+    .cards {
+        width: 40%; /* Two cards per row */
+        margin-bottom: 20px;
+       
+    }
+
+    #burger-button {
+        display: block; /* Display hamburger button on screens less than 970px */
+    }
+
+    nav {
+        display: none; /* Initially hide the nav menu */
+        flex-direction: column;
+         /* Background for the mobile menu */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex; /* Show menu when checked */
+    }
+}
+
+
+
 
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+    #latest-games{
+        text-align: center;
+    }
+    #navbar li {
+        line-height: 2; /* Adjust this value to control spacing */
+        list-style: none; /* Optional: Removes bullet points if any */
     }
 
-    #navbar {
+    #navbar{
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        width:30vw;
+        background-color: #000;
+        }
+    
+    /* Optionally, if you want to add more spacing between the items */
+    #navbar li + li {
+        margin-top: 10px; /* Adds spacing between consecutive items */
     }
-
     .main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         padding: 10px;
     }
-
+    
     .cards {
+        width: 40%; /* Two cards per row */
+        margin-bottom: 20px;
+    }
+
+    #burger-button {
+        display: block; /* Display hamburger button on screens less than 970px */
+    }
+
+    nav {
+        display: none; /* Initially hide the nav menu */
+        flex-direction: column;
+         /* Background for the mobile menu */
+        position: absolute;
+        top: 50px;
+        left: 0;
         width: 100%;
-        /* One card per row */
-        margin-bottom: 15px;
+        text-align: center;
     }
 
-    #store-hero {
-        height: 40vh;
-    }
-
-    #store-hero h2 {
-        font-size: 1.5em;
-        letter-spacing: 5px;
-    }
-
-    #store-hero p {
-        font-size: 0.8em;
-        letter-spacing: 2px;
-    }
-
-    button {
-        padding: 8px 16px;
+    #menu-toggle:checked ~ nav {
+        display: flex; /* Show menu when checked */
     }
 }
 
 /* Extra small screens (very small devices) */
 @media only screen and (max-width: 480px) {
-    #store-hero {
+    #navbar li {
+        line-height: 2; /* Adjust this value to control spacing */
+        list-style: none; /* Optional: Removes bullet points if any */
+    }
+    
+    
+    /* Optionally, if you want to add more spacing between the items */
+    #navbar li + li {
+        margin-top: 10px; /* Adds spacing between consecutive items */
+    }
+    #latest-games{
+        text-align: center;
+    }#store-hero {
         height: 30vh;
     }
-
+    
     #store-hero h2 {
         font-size: 1.2em;
         letter-spacing: 3px;
     }
-
+    
     #store-hero p {
         font-size: 0.7em;
         letter-spacing: 1px;
     }
-
+    
     .cards {
         width: 100%;
         margin-bottom: 10px;
     }
-
+    
     .image img {
         height: 200px;
     }
-
+    
     button {
         padding: 6px 12px;
         font-size: 0.9em;
