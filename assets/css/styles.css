@@ -25,13 +25,19 @@ html {
 }
 
 body {
+  background: url(../media/background.jpg);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #000;
+  /* background-image: url(assets\media\background.jpg); */
+  /* background-color: #000; */
   height: 100vh;
-  background-position: relative;
-  background-repeat: repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  width: 100%;
+}
+
+.sticky {
   width: 100%;
 }
 
@@ -73,8 +79,12 @@ button.normal {
 /* Hero Section */
 .hero {
   background: url("../media/hero-bg-home.webp") no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-attachment: fixed;
+  /* Keeps the background fixed */
+  overflow-x: hidden;
   margin-top: 90px;
   padding: 60px 0;
   height: 100vh;
@@ -160,17 +170,16 @@ button.normal {
 
 .tournament .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.tournament-content,
-.tournament-prize {
-  margin-bottom: 0;
-}
-
 .tournament-content {
-  max-width: 310px;
+  /* max-width: 310px;
+ */
+  width: 100%;
+  margin-bottom: 100px;
 }
 
 .tournament-subtitle {
@@ -221,18 +230,46 @@ button.normal {
   transition: 0.15s ease-in-out;
 }
 
+.tournament .btn:hover {
+  /* Glowing effect on hover */
+  box-shadow: 10 10 15px 5px rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #ffffff;
+}
+
+.tournament .btn:active {
+  /* Box shadow on click */
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+}
+
+.tournament-prize {
+  margin-bottom: 100px;
+}
+
 .tournament-prize-title {
   font-size: 30px;
   margin-bottom: 20px;
 }
 
 .tournament-prize data {
-  background: var(--color);
+  background: rgb(255, 187, 0, 0.9);
   color: hsl(234, 14%, 14%);
   font-family: 'Oswald', sans-serif;
   font-size: 26px;
   padding: 8px 42px;
   border-radius: 50px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  cursor: grab;
+  transition: ease-in-out 0.15s;
+}
+
+.tournament-prize data:hover {
+  background: rgba(227, 174, 67, 0.9);
+  color: hsl(0, 0%, 8%);
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  padding: 8px 42px;
+  border-radius: 50px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .tournament-prize img {
@@ -282,7 +319,9 @@ button.normal {
 
 /* Store Section */
 #store {
-  margin: auto 150px;
+  margin: auto;
+  padding: 0 15px;
+  max-width: 100%;
 }
 
 #store h2 {
@@ -309,14 +348,20 @@ button.normal {
 
 /* Gaming Products Display */
 #gaming-products .product-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  /* Horizontal centering */
+  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 #gaming-products .product {
-  width: 23%;
-  min-width: 250px;
+  background-color: rgb(16, 3, 51, 0.7);
+  width: 300px;
+  /* min-width: 250px; */
   padding: 20px 20px;
   border: 1px solid #313131;
   border-radius: 25px;
@@ -386,23 +431,31 @@ button.normal {
 
 /* Latest News Section */
 .latest-news-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
 }
 
 .latest-news-container .news-box {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a;
+   */
+  background-color: rgb(16, 3, 51, 0.9);
+
   border-radius: 10px;
-  height: 380px;
-  width: 350px;
+  height: 400px;
+  /* width: 330px; */
   padding: 20px;
-  margin: 20px;
+  margin: 10px;
   margin-top: 50px;
 }
-
+@media (max-width:768px) {
+  .latest-news-container .news-box{
+    max-height: fit-content;
+  }
+}
 .latest-news-container .news-box img {
   width: 100%;
+  height: 200px;
 }
 
 .latest-news-container .news-box h4 {
@@ -424,28 +477,35 @@ button.normal {
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 /* Follow Us Section */
 .social-media-icons {
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width:768px) {
+  .social-media-icons{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
+  }
+}
 .social-media-icons .icon-box {
   height: 150px;
-  width: 150px;
-  background-color: #313131;
+  width: 100px;
+  /* background-color: #313131; */
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-content: center;
-  margin: 30px;
+  margin: 10px;
   cursor: pointer;
-  border-radius: 10px;
-  opacity: 60%;
+  opacity: 85%;
   transition: all 0.2s ease;
 }
 
@@ -470,24 +530,40 @@ button.normal {
 #our-partners {
   text-align: center;
   margin: 4rem auto;
+  padding: 0 15px;
+  /* Add padding instead of large margins to avoid overflow */
+  max-width: 100%;
+  /* Prevent it from exceeding the viewport width */
+  overflow-x: hidden;
 }
 
 #our-partners h2 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #brand-logos {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  /* Allow logos to wrap to a new line if necessary */
+  gap: 2rem;
+  /* Adjust the gap to control spacing */
+  margin: 0 auto;
+  /* Center align the logos */
+  max-width: 100%;
 }
 
 .single-logo {
   margin: 3rem;
+  flex: 1 1 150px;
+  /* Allow logos to shrink and grow to fit */
+  min-width: 100px;
 }
 
 .single-logo img {
-  opacity: 50%;
+  max-width: 100%;
+  opacity: 80%;
   transition: 0.2s ease;
 }
 
@@ -504,14 +580,19 @@ button.normal {
   justify-content: space-around;
   padding: 20px 100px;
 }
-
+@media (max-width:600px){
+  .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
 .location-name {
   text-align: center;
 }
 
 .location-name .text {
   margin: 0 0;
-  font-size: 60px;
+  font-size: 50px;
   text-transform: capitalize;
   color: transparent;
   -webkit-text-stroke-width: 2px;

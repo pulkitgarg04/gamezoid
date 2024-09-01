@@ -61,6 +61,7 @@ header {
 #mobile {
     display: none;
     align-items: center;
+    position: relative;
 }
 
 #sign-in {
@@ -78,3 +79,4 @@ header {
     border: 1px solid white;
     font-weight: 500;
 }
+
