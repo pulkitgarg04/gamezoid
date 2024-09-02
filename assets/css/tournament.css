@@ -3,9 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers text vertically */
     justify-content: center;
-    /* Centers text horizontally */
     text-align: center;
     text-transform: uppercase;
 
@@ -91,10 +89,8 @@
     width: 0;
     height: 0;
     border-top: 50px solid #ffbb00;
-    /* Green background */
     border-left: 40px solid #ffbb00;
     border-bottom: 0px solid transparent;
-    /* transform: translateY(-50%); */
     clip-path: polygon(0 0, 100% 0, 10% 100%, 0 100%);
 }
 
@@ -110,7 +106,6 @@
 
 .prize-info {
     margin-bottom: 30px;
-    /* align-items: center; */
     text-align: center;
     /* padding:5px; */
 }
@@ -130,9 +125,7 @@
     width: 180px;
     border-radius: 15px;
     display: flex;
-    /* aligns horizontally */
     justify-content: center;
-    /* align vertically */
     align-items: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -197,8 +190,6 @@
 .container {
     width: 100%;
     border-radius: 20px 0 0 20px;
-    /* Adjust the polygon coordinates to create different shapes */
-    /* Ensure the container takes full width */
 }
 
 .box1 {
@@ -234,7 +225,6 @@
 
 .box1 .icon {
     width: 40px;
-    /* Adjust size as needed */
     margin-right: 20px;
 }
 
