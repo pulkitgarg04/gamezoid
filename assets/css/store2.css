@@ -116,9 +116,9 @@ button:hover{
 
 #navbar {
     display: flex;
-    justify-content: space-between; /* Distribute items evenly across the available space */
+    justify-content: space-between;
     align-items: center;
-    padding: 0; /* Remove extra padding */
+    padding: 0;
   }
 
 
@@ -174,19 +174,17 @@ button:hover{
         margin-bottom: 20px;
     }
     #burger-button {
-        display: none; /* Hide hamburger button on large screens */
+        display: none;
     }
 
     #navbar {
         display: none;
         position: static;
         width: auto;
-        background-color: transparent; /* Remove background color if not needed */
+        background-color: transparent;
     }
 }
 
-
-/* Medium screens (tablets) */
 @media only screen and (max-width: 1024px) and (min-width: 970px) {
     
     .main {
@@ -197,7 +195,7 @@ button:hover{
     }
     
     .cards {
-        width: 40%; /* Two cards per row */
+        width: 40%;
         margin-bottom: 20px;
     }
     #logo img {
@@ -211,19 +209,18 @@ button:hover{
         text-align: center;
     }
     #burger-button {
-        display: none; /* Hide hamburger button on large screens */
+        display: none;
     }
 }
 @media (min-width:768px) and (max-width:970px){
     
     #navbar li {
-        line-height: 2; /* Adjust this value to control spacing */
-        list-style: none; /* Optional: Removes bullet points if any */
+        line-height: 2;
+        list-style: none;
     }
-    
-    /* Optionally, if you want to add more spacing between the items */
+
     #navbar li + li {
-        margin-top: 10px; /* Adds spacing between consecutive items */
+        margin-top: 10px;
     }
     #latest-games{
         text-align: center;
@@ -236,19 +233,18 @@ button:hover{
     }
     
     .cards {
-        width: 40%; /* Two cards per row */
+        width: 40%;
         margin-bottom: 20px;
        
     }
 
     #burger-button {
-        display: block; /* Display hamburger button on screens less than 970px */
+        display: block;
     }
 
     nav {
-        display: none; /* Initially hide the nav menu */
+        display: none;
         flex-direction: column;
-         /* Background for the mobile menu */
         position: absolute;
         top: 50px;
         left: 0;
@@ -257,21 +253,17 @@ button:hover{
     }
 
     #menu-toggle:checked ~ nav {
-        display: flex; /* Show menu when checked */
+        display: flex;
     }
 }
 
-
-
-
-/* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
     #latest-games{
         text-align: center;
     }
     #navbar li {
-        line-height: 2; /* Adjust this value to control spacing */
-        list-style: none; /* Optional: Removes bullet points if any */
+        line-height: 2;
+        list-style: none;
     }
 
     #navbar{
@@ -281,9 +273,8 @@ button:hover{
         background-color: #000;
         }
     
-    /* Optionally, if you want to add more spacing between the items */
     #navbar li + li {
-        margin-top: 10px; /* Adds spacing between consecutive items */
+        margin-top: 10px;
     }
     .main {
         flex-direction: row;
@@ -293,18 +284,17 @@ button:hover{
     }
     
     .cards {
-        width: 40%; /* Two cards per row */
+        width: 40%;
         margin-bottom: 20px;
     }
 
     #burger-button {
-        display: block; /* Display hamburger button on screens less than 970px */
+        display: block;
     }
 
     nav {
-        display: none; /* Initially hide the nav menu */
+        display: none;
         flex-direction: column;
-         /* Background for the mobile menu */
         position: absolute;
         top: 50px;
         left: 0;
@@ -313,21 +303,18 @@ button:hover{
     }
 
     #menu-toggle:checked ~ nav {
-        display: flex; /* Show menu when checked */
+        display: flex;
     }
 }
 
-/* Extra small screens (very small devices) */
 @media only screen and (max-width: 480px) {
     #navbar li {
-        line-height: 2; /* Adjust this value to control spacing */
-        list-style: none; /* Optional: Removes bullet points if any */
+        line-height: 2;
+        list-style: none;
     }
     
-    
-    /* Optionally, if you want to add more spacing between the items */
     #navbar li + li {
-        margin-top: 10px; /* Adds spacing between consecutive items */
+        margin-top: 10px;
     }
     #latest-games{
         text-align: center;
