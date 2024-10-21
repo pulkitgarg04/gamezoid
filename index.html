@@ -47,7 +47,7 @@
           <li><a href="./pages/about.html">About</a></li>
           <li><a href="./pages/contact.html">Contact</a></li>
           <li><a href="./pages/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-          <li><a href="./pages/account.html"><i class="fa-regular fa-circle-user"></i></a></li>
+          <li><i onclick="accountRoute()" class="fa-regular fa-circle-user"></i></li>
           <a href="#"><span id="close-btn"><i class="fa fa-times"></i></span></a>
         </ul>
       </nav>
@@ -453,6 +453,18 @@
       <p>Copyright &#169; 2024 - All Rights Reserved by <span>GameZoid</span></p>
     </div>
   </footer>
+
+  <script>
+    function accountRoute() {
+        const currentUser = localStorage.getItem('currentUser');
+        
+        if (currentUser) {
+            window.location.href = './pages/account.html';
+        } else {
+            window.location.href = './pages/login.html';
+        }
+    };
+  </script>
 </body>
 
 </html>

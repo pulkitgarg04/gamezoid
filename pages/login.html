@@ -26,7 +26,7 @@
         <li><a href="./about.html">About</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-        <li><a class="icon-active" href="./account.html"><i class="fa-regular fa-circle-user"></i></a></li>
+        <li><a class="icon-active" href="./login.html"><i class="fa-regular fa-circle-user"></i></a></li>
       </ul>
     </nav>
     <div id="mobile">
@@ -158,6 +158,8 @@
         }
 
         alert(`Welcome back, ${existingUser.name}!`);
+
+        localStorage.setItem('currentUser', JSON.stringify(existingUser));
 
         setTimeout(() => {
             window.location.href = './account.html';

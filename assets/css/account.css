@@ -54,14 +54,41 @@ button.normal {
     transition: 0.2s;
 }
 
-.coming-soon {
-    margin: 200px;
+.account-container {
+    margin: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.coming-soon h1 {
-    font-size: 3rem;
+.profile {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info p {
+    margin: 10px 0;
+}
+
+.logout-btn {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: var(--color);
+    color: black;
 }

@@ -32,13 +32,20 @@
     <div id="mobile">
       <span class="material-symbols-outlined">local_mall</span>
       <span id="hamburger" class="material-symbols-outlined">menu</span>
-  </div>
+    </div>
   </header>
 
-  <section class="coming-soon">
-    <h1>COMING SOON!</h1>
-    <p>Our website is under construction. We`ll be here soon with our new awesome site.</p>
-  </section>
+  <div class="account-container">
+    <h2>Account Information</h2>
+    <div class="profile">
+      <img id="avatar" alt="User Avatar" src="https://avatar.iran.liara.run/public/18">
+      <div class="user-info">
+        <p><strong>Name:</strong> <span id="name">John Doe</span></p>
+        <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
 
   <section id="newsletter" class="section-p1">
     <div class="newstext">
@@ -49,6 +56,7 @@
       <input type="text" placeholder="Your email address">
       <button class="normal">Sign Up</button>
     </div>
+
   </section>
 
   <footer class="section-p1">
@@ -101,6 +109,28 @@
       <p>Copyright &#169; 2024 - All Rights Reserved by <span>GameZoid</span></p>
     </div>
   </footer>
+  <script>
+    function getUserInfo() {
+      const currentUser = localStorage.getItem('currentUser');
+
+      if (currentUser) {
+        const response = JSON.parse(currentUser);
+        document.getElementById('name').innerHTML = response.name;
+        document.getElementById('email').innerHTML = response.email;
+      } else {
+        alert('You need to login to access this page!');
+        window.location.href = './login.html';
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('currentUser');
+      alert('You have been logged out!');
+      window.location.href = './login.html';
+    }
+
+    getUserInfo();
+  </script>
 </body>
 
 </html>
