@@ -1,6 +1,27 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    onAuthStateChanged
+} from "firebase/auth";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDoc,
+    doc,
+    query,
+    where
+} from "firebase/firestore";
+
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
+const FireBaseContext = createContext(null);
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,
@@ -13,16 +34,25 @@ const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL
 };
 
+export const useFirebase = () => useContext(FireBaseContext);
+
 const firebaseApp = initializeApp(firebaseConfig);
 const firebaseAuth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
+const storage = getStorage(firebaseApp);
 
 const googleProvider = new GoogleAuthProvider();
 
-const FireBaseContext = createContext(null);
+export const FireBaseProvider = (props) => {
+    const [user, setUser] = useState(null);
 
-export const useFirebase = () => useContext(FireBaseContext);
+    useEffect(() => {
+        onAuthStateChanged(firebaseAuth, (user) => {
+            if(user) setUser(user);
+            else setUser(null);
+        });
+    }, []);
 
-export const FireBaseProvider = ({ children }) => {
     const signupUserWithEmailAndPassword = (email, password) => {
         return createUserWithEmailAndPassword(firebaseAuth, email, password)
     }
@@ -35,9 +65,18 @@ export const FireBaseProvider = ({ children }) => {
         return signInWithPopup(firebaseAuth, googleProvider);
     }
 
+    const isLoggedIn = user ? true : false;
+
     return (
-        <FireBaseContext.Provider value={{ signupUserWithEmailAndPassword, loginUserWithEmailAndPassword, signInWithGoogle }}>
-            {children}
+        <FireBaseContext.Provider
+            value={{
+                signupUserWithEmailAndPassword, 
+                loginUserWithEmailAndPassword,
+                signInWithGoogle,
+                isLoggedIn
+            }}
+        >
+            {props.children}
         </FireBaseContext.Provider>
     )
 }

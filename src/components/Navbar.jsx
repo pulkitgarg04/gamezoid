@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaTimes, FaBars, FaUserCircle } from 'react-icons/fa';
+import { FaRegUser } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
@@ -17,8 +17,24 @@ function Navbar() {
                     <Link to="/about"><li className="mx-3">Tournaments</li></Link>
                     <Link to="/about"><li className="mx-3">Community</li></Link>
                     <Link to="/about"><li className="mx-3">News</li></Link>
-                    <Link to="/about"><li className="mx-3">About</li></Link>
-                    <Link to="/contact"><li className="mx-3">Contact</li></Link>
+                    <select name="currency" id="currency">
+                        <option value="inr">INR</option>
+                        <option value="inr">USD</option>
+                        <option value="inr">CAD</option>
+                        <option value="inr">YEN</option>
+                    </select>
+                    <Link to="/cart">
+                        <li className="mx-3 flex-col">
+                            <div>
+                                <p>My Cart</p>
+                                <p>Rs. 0.0</p>
+                            </div>
+                            <FaBagShopping />
+                        </li>
+                    </Link>
+                    <Link to="/account">
+                        <FaRegUser />
+                    </Link>
                 </ul>
                 {/* <ThemeToggle /> */}
             </div>
