@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        manrope: ['Manrope', 'sans-serif'],
+        barlow: ['Barlow', 'sans-serif'],
       },
     },
   },
